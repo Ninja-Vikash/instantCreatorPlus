@@ -29,23 +29,22 @@ Get started effortlessly with InstantCreator+ for a seamless and efficient front
     const HTMLFile = `<!DOCTYPE html> 
     <html lang="en"> 
     <head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+       <meta charset="UTF-8"> 
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>instantCreator</title> 
     <link rel="stylesheet" href="style.css"> 
     </head> 
     <body> 
-    <!-- Thanks for using instantCreator --> 
-    <main>
+       <!---------------- You are using instantCreator+ ----------------> 
+      <main>
         <h1>Welcome to <span>instantCreator</span>.</h1>
 
-        <figure>
+         <figure>
             <img src="assets/html.svg" alt="">
-        </figure>
-    </main> 
+         </figure>
+      </main> 
     </body>
     </html>
-
     `;
     fs.writeFile("index.html", HTMLFile, () => {
     console.log("HTML File written!");
@@ -55,56 +54,56 @@ Get started effortlessly with InstantCreator+ for a seamless and efficient front
     const CSSFile = `@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;900&display=swap'); 
 
     * { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: 'Poppins';
+       margin: 0; 
+       padding: 0; 
+       box-sizing: border-box; 
+       font-family: 'Poppins';
     } 
 
     body, 
     html { 
-    height: 100%; 
-    width: 100%;
+       height: 100%; 
+       width: 100%;
     }
 
     main {
-    background-color: #09001c;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+       background-color: #09001c;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
     }
 
     main h1 {
-    color : white;
-    font-size: 34px;
-    font-weight: 400;
+       color : white;
+       font-size: 34px;
+       font-weight: 400;
     }
 
     main h1 span {
-    font-weight: 600;
+       font-weight: 600;
     }
 
     main figure :nth-child(1) {
-    height: 400px;
-    animation: rotateX 7s linear infinite;
+       height: 400px;
+       animation: rotateY 7s linear infinite;
     }
 
-    @keyframes rotateX {
-    to{
-        transform: rotateY(360deg);
-    }
+    @keyframes rotateY {
+       to{
+          transform: rotateY(360deg);
+       }
     }
     `;
 
     fs.writeFile("style.css", CSSFile, () => {
-    console.log("CSS File written!");
+       console.log("CSS File written!");
     });
 
     // --------------------- CODE FOR DIRECTORY CREATING
     fs.mkdir(path.join(__dirname, "assets"), () => {
-    console.log("Directory created successfully!");
+       console.log("Directory created successfully!");
     });
 
     // --------------------- CODE FOR SVG WRITING
@@ -115,7 +114,7 @@ Get started effortlessly with InstantCreator+ for a seamless and efficient front
     `;
 
     fs.writeFile("./assets/html.svg", SVGFile, () => {
-    console.log("SVG File written!");
+       console.log("SVG File written!");
     });
     ```
 
@@ -136,6 +135,6 @@ Get started effortlessly with InstantCreator+ for a seamless and efficient front
 
 Ensure you have Node.js installed on your PC, as npm won't work without it.
 
-### InstantCreator
+### InstantCreator+
 
-InstantCreator+ is the new version of instantCreator.
+InstantCreator+ is the new version of <a href="https://github.com/Ninja-Vikash/instantCreator">instantCreator</a>.
