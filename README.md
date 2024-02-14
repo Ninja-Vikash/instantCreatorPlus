@@ -1,10 +1,9 @@
 # InstantCreator+
 
 [![npm Button](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
-[![Node.js Button](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white&labelColor=black&labelWidth=50)](https://nodejs.org/)
 
 ---
-<img heigh="90px" width="90px" src="https://icons8.com/icon/hsPbhkOH4FMe/node-js" align="left">
+<img heigh="30px" width="30px" src="https://github.com/Ninja-Vikash/asset-cloud/blob/main/icon%20%26%20png/nodejs.png" align="left">
 InstantCreator+ represents the latest advancement, surpassing its predecessors and establishing itself as the pinnacle version.
 
 ---
