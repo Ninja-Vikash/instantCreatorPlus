@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+import fs from 'fs'
+import chalk from 'chalk';
 
 // -------------------- CODE FOR HTML WRITING
 const HTMLFile = `<!DOCTYPE html> 
@@ -7,7 +7,7 @@ const HTMLFile = `<!DOCTYPE html>
 <head> 
    <meta charset="UTF-8"> 
    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-   <title>instantCreator</title> 
+   <title>instantCreator+</title> 
    <link rel="stylesheet" href="style.css"> 
 </head> 
 <body> 
@@ -23,13 +23,15 @@ const HTMLFile = `<!DOCTYPE html>
          <p>powered by</p>
          <img src="assets/nodejs.svg" alt="">
       </div>
-   </main> 
-</body>
-</html>
+   </main>
 
-`;
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="script.js"></script>
+</body>
+</html>`;
+
 fs.writeFile("index.html", HTMLFile, () => {
-  console.log("HTML File written!");
+  console.log(chalk.blue("\u2713 DONE "+ chalk.white(": HTML file creation!")));
 });
 
 // -------------------- CODE FOR CSS WRITING
@@ -46,6 +48,7 @@ body,
 html { 
   height: 100%; 
   width: 100%;
+  overflow: hidden;
 }
 
 main {
@@ -60,22 +63,15 @@ main {
 main h1 {
   color : white;
   font-size: 34px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 main h1 span {
-  font-weight: 600;
+  font-weight: 500;
 }
 
-main figure :nth-child(1) {
+main figure img {
   height: 400px;
-  animation: rotateX 7s linear infinite;
-}
-
-@keyframes rotateX {
-  to{
-    transform: rotateY(360deg);
-  }
 }
 
 main div {
@@ -92,16 +88,33 @@ main p {
 
 main div > img {
   width: 80px;
-}
-`;
+}`;
 
 fs.writeFile("style.css", CSSFile, () => {
-  console.log("CSS File written!");
+  console.log(chalk.blue("\u2713 DONE "+ chalk.white(": CSS file creation!")));
 });
 
+// -------------------- CODE FOR JS WRITING
+const scriptJS = `gsap.from("figure img", {
+  opacity: 0,
+  y: 100,
+  scale: 0.8,
+  duration: 2,
+})
+
+gsap.from("main div", {
+  opacity: 0,
+  y: 200,
+  duration: 5
+})`
+
+fs.writeFile("script.js", scriptJS, ()=>{
+  console.log(chalk.blue("\u2713 DONE "+ chalk.white(": JS file creation!")));
+})
+
 // --------------------- CODE FOR DIRECTORY CREATING
-fs.mkdir(path.join(__dirname, "assets"), () => {
-  console.log("Directory created successfully!");
+fs.mkdir("assets", () => {
+  console.log(chalk.blue("\u2713 DONE "+ chalk.white(": Directory creation!")));
 });
 
 // --------------------- CODE FOR SVG WRITING
@@ -118,9 +131,13 @@ const SVGNodejs =`
 `;
 
 fs.writeFile("./assets/html.svg", SVGHtml, () => {
-  console.log("SVG File written!");
+  console.log(chalk.blue("\u2713 DONE "+ chalk.white(": SVG file creation!")));
 });
 
 fs.writeFile("./assets/nodejs.svg", SVGNodejs, () => {
-  console.log("SVG File written!");
+  console.log(chalk.blue("\u2713 DONE "+ chalk.white(": SVG file creation!")));
 });
+
+setTimeout(() => {
+  console.log(chalk.green("\u2713 Deployment done!"))
+}, 500);
