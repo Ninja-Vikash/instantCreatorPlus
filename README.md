@@ -184,8 +184,8 @@ Get started effortlessly with InstantCreator+ for a seamless and efficient front
 
     > Code for InstantCreator+.
 
-    > [!WARNING]\
-    > Make sure you have run `npm i chalk`
+> [!WARNING]\
+> Make sure you have run `npm i chalk`
 
 5. To run the code, execute the following command in your terminal:
     ```
