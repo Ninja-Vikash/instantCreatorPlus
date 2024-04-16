@@ -151,7 +151,7 @@ Get started effortlessly with InstantCreator+ for a seamless and efficient front
 
 
     // --------------------- CODE FOR DIRECTORY CREATING
-    fs.mkdir(path.join(__dirname, "assets"), () => {
+    fs.mkdir("assets", () => {
        console.log(chalk.blue("\u2713 DONE "+ chalk.white(": Directory creation!")));
     });
 
